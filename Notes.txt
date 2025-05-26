@@ -1,0 +1,27 @@
+Property fields
+
+    title: ['104 Mill Road, Kensington, Whangarei']
+    subTitle: ['Urgent Sale - No Plan B!']
+    pricing: ['Auction', 'Offers Over $389,000', ...]
+
+    dateListed [date]
+    listingID [4 symbols ID]
+
+    propertyDetails [long text]
+
+    featuresIcon
+        propertyType ['house', 'land', ...]
+        bedroom: [1,2,3, ...]
+        bathroom: [1,2,3, ...]
+        landArea: ['500m2']
+        houseArea: ['100m2']
+        landType: ['Cross Lease', 'Freehold']
+
+    featuresList
+        'Style': ['Contemporary']
+        'Roofing': ['Longrun']
+        'Exterior' Cladding: ['Hardiplank']
+        'Lot Features': ['Cul-de-sac', 'Fenced - Fully', 'Level', 'Street Frontage']
+
+
+27-05-25 - https://v0.dev/chat/mock-data-generation-1OgoILGjAhc
