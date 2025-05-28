@@ -1,3 +1,15 @@
+Project name: next-v6-estate
+
+Zoo:
+    Next.js
+    Vercel - hosting
+    v0.dev - UI AI
+    shadcn - UI row components
+    Lucide - icons
+    Clerk - auth
+    Supabase - DB
+
+
 Property fields
 
     title: ['104 Mill Road, Kensington, Whangarei']
