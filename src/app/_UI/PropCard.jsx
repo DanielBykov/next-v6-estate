@@ -1,7 +1,8 @@
 import Image from "next/image"
-import { Bed, Bath, Car, Maximize, Calendar, Tag } from "lucide-react"
+import { Bed, Bath, Car, Maximize, Calendar, House , TentTree} from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link";
 
 export default function PropertyCard(prop) {
   const {
@@ -11,6 +12,7 @@ export default function PropertyCard(prop) {
     dateListed,
     listingID,
     propertyDetails,
+    photos,
     featuresIcon: {
       bedroom,
       bathroom,
@@ -20,14 +22,15 @@ export default function PropertyCard(prop) {
   } = prop
 
   return (
-    <Card className="w-full max-w-lg overflow-hidden">
+    <Link href={`/property/${listingID}`} passHref>
+      <Card className="w-full max-w-lg overflow-hidden">
       <CardContent className="p-0">
         {/* Photo Masonry Section */}
         <div className="relative h-64 grid grid-cols-2 grid-rows-2 gap-1">
           {/* Large main image */}
           <div className="col-span-1 row-span-2">
             <Image
-              src="/placeholder.svg?height=256&width=200"
+              src={photos[0]}
               alt="Property main view"
               width={200}
               height={256}
@@ -38,7 +41,7 @@ export default function PropertyCard(prop) {
           {/* Second smaller image */}
           <div className="col-span-1 row-span-1">
             <Image
-              src="/placeholder.svg?height=127&width=200"
+              src={photos[1]}
               alt="Property view 2"
               width={200}
               height={127}
@@ -47,16 +50,17 @@ export default function PropertyCard(prop) {
           </div>
 
           {/* Third smaller image with overlay */}
-          <div className="col-span-1 row-span-1 relative group cursor-pointer">
+          <div className="col-span-1 row-span-1 relative group">
             <Image
-              src="/placeholder.svg?height=127&width=200"
+              src={photos[2]}
               alt="Property view 3"
               width={200}
               height={127}
               className="w-full h-full object-cover"
             />
             {/* Hover overlay */}
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+            <div
+              className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
               <span className="text-white text-xl font-semibold">+25</span>
             </div>
           </div>
@@ -68,7 +72,7 @@ export default function PropertyCard(prop) {
           <div className="space-y-2">
             {/* Listed Date */}
             <div className="flex items-center text-sm text-muted-foreground">
-              <Calendar className="w-4 h-4 mr-1" />
+              <Calendar className="w-4 h-4 mr-1"/>
               <span>Listed {dateListed.toDateString()}</span>
             </div>
 
@@ -89,25 +93,25 @@ export default function PropertyCard(prop) {
           <div className="pt-2 border-t">
             <div className="grid grid-cols-2 gap-3">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Bed className="w-4 h-4" />
+                <Bed className="w-4 h-4"/>
                 <span>{bathroom}</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Bath className="w-4 h-4" />
+                <Bath className="w-4 h-4"/>
                 <span>{bathroom}</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Maximize className="w-4 h-4" />
+                <TentTree className="w-4 h-4"/>
                 <span>{landArea}</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Maximize className="w-4 h-4" />
+                <House className="w-4 h-4"/>
                 <span>{houseArea}</span>
               </div>
             </div>
           </div>
         </div>
       </CardContent>
-    </Card>
+    </Card></Link>
   )
 }
