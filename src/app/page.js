@@ -1,5 +1,5 @@
-import {properties, propsWithPhotos} from "@/app/mockPropList";
-import PropList from "@/app/_UI/PropList";
+import PropList from "@/_UI/PropList";
+import {propsWithPhotos} from "@/mockData/mockPropList";
 
 export default function Home() {
   return (

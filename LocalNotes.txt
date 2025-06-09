@@ -1,0 +1,7 @@
+Supabase
+Project name: next-v6-estate
+Database Password: RfjJQznXCV4O3TIf
+
+Clark
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_aW50ZWdyYWwtYm9iY2F0LTU4LmNsZXJrLmFjY291bnRzLmRldiQ
+CLERK_SECRET_KEY=sk_test_bCZ3gEBMZOT2CS3ufHiW1muENNeADvRNrrO2QqUuzL

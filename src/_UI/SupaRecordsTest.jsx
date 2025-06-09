@@ -2,8 +2,8 @@
 import {useSession, useUser} from "@clerk/nextjs";
 import {createClient} from "@supabase/supabase-js";
 import {useEffect, useState} from "react";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
+import {Button} from "@/_UI/ui/button";
+import {Input} from "@/_UI/ui/input";
 
 export const SupaRecordsTest = () => {
   const { user } = useUser()

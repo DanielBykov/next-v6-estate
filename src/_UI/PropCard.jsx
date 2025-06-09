@@ -1,8 +1,7 @@
 import Image from "next/image"
-import { Bed, Bath, Car, Maximize, Calendar, House , TentTree} from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Bed, Bath, Calendar, House , TentTree} from "lucide-react"
 import Link from "next/link";
+import {Card, CardContent} from "@/_UI/elements/card";
 
 export default function PropertyCard(prop) {
   const {
@@ -61,7 +60,7 @@ export default function PropertyCard(prop) {
             {/* Hover overlay */}
             <div
               className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-              <span className="text-white text-xl font-semibold">+25</span>
+              <span className="text-white text-xl font-semibold">{`+${photos.length - 3}`}</span>
             </div>
           </div>
         </div>

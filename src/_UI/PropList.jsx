@@ -1,4 +1,4 @@
-import PropertyCard from "@/app/_UI/PropCard";
+import PropertyCard from "@/_UI/PropCard";
 
 const PropList = ({list}) => {
   return (

@@ -9,17 +9,28 @@ Zoo:
     Clerk - auth
     Supabase - DB
 
+    =Ideas=
+    logoipsum.com - random logo
+
 
 Property fields
 
     title: ['104 Mill Road, Kensington, Whangarei']
     subTitle: ['Urgent Sale - No Plan B!']
     pricing: ['Auction', 'Offers Over $389,000', ...]
+    estimated_value: 1261826,
+    agency: 'Ray White',
 
+    location: {
+        "lat": "62.900120",
+        "lng": "29.569660",
+    }
     dateListed [date]
     listingID [4 symbols ID]
 
     propertyDetails [long text]
+
+    photos: []
 
     featuresIcon
         propertyType ['house', 'land', ...]
@@ -27,6 +38,7 @@ Property fields
         bathroom: [1,2,3, ...]
         landArea: ['500m2']
         houseArea: ['100m2']
+        propertyType: ['House', 'Townhouse', 'Apartment']
         landType: ['Cross Lease', 'Freehold']
 
     featuresList
