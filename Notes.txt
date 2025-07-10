@@ -1,6 +1,7 @@
 Project name: next-v6-estate
 
 Zoo:
+    = In Use =
     Next.js
     Vercel - hosting
     v0.dev - UI AI
@@ -9,8 +10,11 @@ Zoo:
     Clerk - auth
     Supabase - DB
 
-    =Ideas=
+    = Ideas / To Try =
     logoipsum.com - random logo
+    DrizzleORM - ORM
+    Prizma (Mongodb)
+    Mongodb pure
 
 
 Property fields
