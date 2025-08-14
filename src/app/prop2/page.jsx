@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Plus } from "lucide-react"
-import {Button} from "@/_UI/elements/button";
+import {ButtonC} from "@/_UI/_shadcnCustom/ButtonC";
 import PropertyCard2 from "@/app/prop2/property-card";
 import SearchFilters from "@/app/prop2/search-filters";
 
-export default function Prop1() {
+export default function Prop2() {
   const [properties, setProperties] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -43,10 +43,10 @@ export default function Prop1() {
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold text-gray-900">RealEstate Pro</h1>
             <Link href="/add-property">
-              <Button className="flex items-center gap-2">
+              <ButtonC className="flex items-center gap-2">
                 <Plus className="w-4 h-4" />
                 Add Property
-              </Button>
+              </ButtonC>
             </Link>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function Prop1() {
 
         {loading ? (
           <div className="text-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"/>
             <p className="mt-4 text-gray-600">Loading properties...</p>
           </div>
         ) : (
@@ -71,7 +71,7 @@ export default function Prop1() {
               <div className="text-center py-12">
                 <p className="text-gray-600 mb-4">No properties found matching your criteria.</p>
                 <Link href="/add-property">
-                  <Button>Add the first property</Button>
+                  <ButtonC>Add the first property</ButtonC>
                 </Link>
               </div>
             ) : (

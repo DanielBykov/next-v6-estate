@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Bed, Bath, Calendar, House , TentTree} from "lucide-react"
 import Link from "next/link";
-import {Card, CardContent} from "@/_UI/elements/card";
+import {Card, CardContent} from "@/_UI/_shadcnCustom/card";
 
 export default function PropertyCard(prop) {
   const {

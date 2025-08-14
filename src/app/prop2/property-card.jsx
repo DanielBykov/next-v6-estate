@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Bed, Bath, Square, MapPin } from "lucide-react"
-import {Card, CardContent} from "@/_UI/elements/card";
-import {Badge_} from "@/_UI/elements/badge";
+import {Card, CardContent} from "@/_UI/_shadcnCustom/card";
+import {Badge_} from "@/_UI/_shadcnCustom/badge";
 
 export default function PropertyCard2({ property }) {
   const formatPrice = (price) => {

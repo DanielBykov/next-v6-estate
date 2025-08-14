@@ -1,0 +1,162 @@
+[
+  {
+    "property_id": "property_1",
+    "address": "PO Box 753, Maxwellport",
+    "lat": "56.730158",
+    "lng": "89.790254",
+    "price": 1854256,
+    "bedrooms": 4,
+    "bathrooms": 1,
+    "land_area": 885,
+    "floor_area": 220,
+    "property_type": "Apartment",
+    "listing_type": "Sale",
+    "agency": "Professionals",
+    "listing_url": "https://matthews.org.nz/",
+    "date_listed": "2025-04-25",
+    "school_zones": [
+      "Rangitoto College",
+      "Epsom Girls Grammar"
+    ],
+    "features": [
+      "Garage",
+      "Garden",
+      "Wood burner"
+    ],
+    "image_urls": [
+      "https://placekitten.com/600/400"
+    ],
+    "valuation": {
+      "estimated_value": 925058,
+      "confidence": "low"
+    }
+  },
+  {
+    "property_id": "property_2",
+    "address": "PO Box 917, Waltonleigh",
+    "lat": "-29.972517",
+    "lng": "-112.605859",
+    "price": 666958,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "land_area": 558,
+    "floor_area": 176,
+    "property_type": "Townhouse",
+    "listing_type": "Sale",
+    "agency": "Ray White",
+    "listing_url": "https://dean.geek.nz/",
+    "date_listed": "2025-04-01",
+    "school_zones": [
+      "Mt Albert Grammar",
+      "Epsom Girls Grammar"
+    ],
+    "features": [
+      "Heat pump",
+      "Ensuite",
+      "Garage"
+    ],
+    "image_urls": [
+      "https://placeimg.com/600/400/any"
+    ],
+    "valuation": {
+      "estimated_value": 1708905,
+      "confidence": "medium"
+    }
+  },
+  {
+    "property_id": "property_3",
+    "address": "787 Lloyd Street\nRD 9, Rongotaupuke",
+    "lat": "-85.049220",
+    "lng": "-69.147472",
+    "price": 675565,
+    "bedrooms": 4,
+    "bathrooms": 1,
+    "land_area": 956,
+    "floor_area": 272,
+    "property_type": "Apartment",
+    "listing_type": "Sale",
+    "agency": "Bayleys",
+    "listing_url": "http://kennedy.geek.nz/",
+    "date_listed": "2025-04-19",
+    "school_zones": [
+      "Auckland Grammar",
+      "Takapuna Grammar"
+    ],
+    "features": [
+      "Wood burner",
+      "Deck",
+      "Heat pump"
+    ],
+    "image_urls": [
+      "https://dummyimage.com/600x400"
+    ],
+    "valuation": {
+      "estimated_value": 623453,
+      "confidence": "low"
+    }
+  },
+  {
+    "property_id": "property_4",
+    "address": "PO Box 528, Ellatown",
+    "lat": "-24.663786",
+    "lng": "177.864048",
+    "price": 471772,
+    "bedrooms": 5,
+    "bathrooms": 1,
+    "land_area": 529,
+    "floor_area": 245,
+    "property_type": "Apartment",
+    "listing_type": "Sale",
+    "agency": "Ray White",
+    "listing_url": "http://www.ford-robson.kiwi.nz/",
+    "date_listed": "2025-03-29",
+    "school_zones": [
+      "Mt Albert Grammar",
+      "Epsom Girls Grammar"
+    ],
+    "features": [
+      "Fully fenced",
+      "Ensuite",
+      "Heat pump"
+    ],
+    "image_urls": [
+      "https://dummyimage.com/600x400"
+    ],
+    "valuation": {
+      "estimated_value": 1493459,
+      "confidence": "medium"
+    }
+  },
+  {
+    "property_id": "property_5",
+    "address": "Level 5\n519 Jones Crescent, Brownberg",
+    "lat": "86.727550",
+    "lng": "-71.083793",
+    "price": 794137,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "land_area": 701,
+    "floor_area": 83,
+    "property_type": "Apartment",
+    "listing_type": "Sale",
+    "agency": "Professionals",
+    "listing_url": "https://www.smart.geek.nz/",
+    "date_listed": "2025-05-06",
+    "school_zones": [
+      "Rangitoto College",
+      "Takapuna Grammar"
+    ],
+    "features": [
+      "Wood burner",
+      "Deck",
+      "Heat pump"
+    ],
+    "image_urls": [
+      "https://placekitten.com/600/400"
+    ],
+    "valuation": {
+      "estimated_value": 1567062,
+      "confidence": "high"
+    }
+  }
+]

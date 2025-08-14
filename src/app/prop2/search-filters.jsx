@@ -3,8 +3,8 @@
 import { useState } from "react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Search } from "lucide-react"
-import {Input} from "@/_UI/elements/input";
-import {Button} from "@/_UI/elements/button";
+import {Input} from "@/_UI/_shadcnCustom/input";
+import {ButtonC} from "@/_UI/_shadcnCustom/ButtonC";
 
 export default function SearchFilters({ onSearch }) {
   const [filters, setFilters] = useState({
@@ -89,13 +89,13 @@ export default function SearchFilters({ onSearch }) {
       </div>
 
       <div className="flex gap-2 mt-4">
-        <Button type="submit" className="flex items-center gap-2">
+        <ButtonC type="submit" className="flex items-center gap-2">
           <Search className="w-4 h-4" />
           Search
-        </Button>
-        <Button type="button" variant="outline" onClick={handleReset}>
+        </ButtonC>
+        <ButtonC type="button" variant="outline" onClick={handleReset}>
           Reset
-        </Button>
+        </ButtonC>
       </div>
     </form>
   )

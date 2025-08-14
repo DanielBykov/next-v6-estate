@@ -1,4 +1,5 @@
-Project name: next-v6-estate
+Project dev name: next-v6-estate
+Project name: EstateVibe
 
 Zoo:
     = In Use =
