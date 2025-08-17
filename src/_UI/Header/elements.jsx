@@ -5,6 +5,24 @@ import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {ButtonC} from "@/_UI/_shadcnCustom/ButtonC";
 
+export const New = ({children}) => (
+  <div className="" data-ui="">
+    {children}
+  </div>
+);
+
+export const HeaderBox = ({children}) => (
+  <div className="container inset-x-0 bg-gray-50 mx-auto" data-ui="">
+    {children}
+  </div>
+);
+
+export const NavBox = ({children}) => (
+  <div aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto" data-ui="">
+    {children}
+  </div>
+);
+
 export const Logo = () => (
   <a href="/public" className="-m-1.5 p-1.5" data-ui="Logo">
     {/*<span className="sr-only">Estate Vibe logo</span>*/}
@@ -15,11 +33,6 @@ export const Logo = () => (
       <text x="45" y="25" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="700" fill="#1e3a8a">Estate</text>
       <text x="45" y="42" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="400" fill="#6b7280">Vibe</text>
     </svg>
-    {/*<img*/}
-    {/*  alt=""*/}
-    {/*  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"*/}
-    {/*  className="h-8 w-auto"*/}
-    {/*/>*/}
   </a>
 );
 export const LogoLG = () => (
@@ -41,16 +54,15 @@ export const MobileMenuButton = ({onClick}) => (
   </div>
 );
 
-export const Navi = ({items}) => {
+export const NavigationItems = ({items}) => {
   const pathname = usePathname();
   const isActiveItem = href => {
     return href.split('/').filter(e => e)[0] === pathname.split('/').filter(e => e)[0];
   };
   return (
-    <div className="hidden lg:flex lg:gap-x-12" data-ui="Navi">
+    <div className="hidden lg:flex lg:gap-x-5" data-ui="Navi">
       {items.map((item) => (
         <ButtonC
-          // className="bg-blue-200"
           key={item.name}
           asChild
           variant={isActiveItem(item.href) ? "secondary":"outline"}

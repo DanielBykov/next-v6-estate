@@ -21,7 +21,7 @@ export default function PropertyCard(prop) {
   } = prop
 
   return (
-    <Link href={`/property/${listingID}`} passHref>
+    <Link href={`/prop1/${listingID}`} passHref>
       <Card className="w-full max-w-lg overflow-hidden">
       <CardContent className="p-0">
         {/* Photo Masonry Section */}

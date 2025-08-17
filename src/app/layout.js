@@ -4,6 +4,7 @@ import {ClerkProvider, SignedIn, SignedOut, SignInButton, SignUpButton, UserButt
 import {HeaderBY_v0Generated} from "@/_UI/_backYard/HeaderBY_v0-generated";
 import Header from "@/_UI/Header/Header";
 import Body from "@/_UI/Main/Body";
+import {ScreenSize} from "@/_UI/_dev/ScreenSize";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,21 +28,11 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 
       <div className="min-h-screen">
-        {/*<HeaderBY_v0Generated />*/}
+        <ScreenSize cls="top-1 left-12" devMode={true}/>
         <Header/>
         <Body>{children}</Body>
       </div>
 
-      {/*<header className="flex justify-end items-center p-4 gap-4 h-16">*/}
-      {/*  <SignedOut>*/}
-      {/*    <SignInButton mode={'modal'}/>*/}
-      {/*    <SignUpButton mode={'modal'}/>*/}
-      {/*  </SignedOut>*/}
-      {/*  <SignedIn>*/}
-      {/*    <UserButton />*/}
-      {/*  </SignedIn>*/}
-      {/*</header>*/}
-      {/*{children}*/}
       </body>
       </html>
     </ClerkProvider>
