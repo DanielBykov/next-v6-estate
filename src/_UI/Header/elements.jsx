@@ -50,9 +50,10 @@ export const Navi = ({items}) => {
     <div className="hidden lg:flex lg:gap-x-12" data-ui="Navi">
       {items.map((item) => (
         <ButtonC
+          // className="bg-blue-200"
           key={item.name}
           asChild
-          variant={isActiveItem(item.href) ? "menuActive":"menu"}
+          variant={isActiveItem(item.href) ? "secondary":"outline"}
           rounded="full"
           >
           <Link href={item.href}>{item.name}</Link>

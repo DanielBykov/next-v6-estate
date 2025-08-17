@@ -5,10 +5,10 @@ import {LoginLG, LogoLG, MobileMenuButton, Navi, NaviMobileDialog} from "@/_UI/H
 
 const navigationItems = [
   { name: 'Home', href: '/' },
-  { name: 'Product', href: '/product' },
-  { name: 'Features', href: '/features' },
-  { name: 'Company', href: '/company' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Residential', href: '/residential' },
+  { name: 'Rural', href: '/rural' },
+  { name: 'Commercial', href: '/commercial' },
+  { name: 'Prop2', href: '/prop2' },
 ]
 
 export default function Header() {
