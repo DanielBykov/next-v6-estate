@@ -24,15 +24,20 @@ export const NavBox = ({children}) => (
 );
 
 export const Logo = () => (
-  <a href="/public" className="-m-1.5 p-1.5" data-ui="Logo">
-    {/*<span className="sr-only">Estate Vibe logo</span>*/}
-    <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15 15l12 9v21h-8v-12h-8v12H3V24l12-9z" fill="#1e3a8a" stroke="#1e3a8a" strokeWidth="1" strokeLinejoin="round"/>
-      <path d="M15 15l12 9H3l12-9z" fill="#fbbf24"/>
+  <a href="/" className="-m-1.5 p-1.5" data-ui="Logo">
+    <span className="sr-only">Estate Vibe logo</span>
+    {/*<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">*/}
+    {/*  <path d="M15 15l12 9v21h-8v-12h-8v12H3V24l12-9z" fill="#1e3a8a" stroke="#1e3a8a" strokeWidth="1" strokeLinejoin="round"/>*/}
+    {/*  <path d="M15 15l12 9H3l12-9z" fill="#fbbf24"/>*/}
 
-      <text x="45" y="25" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="700" fill="#1e3a8a">Estate</text>
-      <text x="45" y="42" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="400" fill="#6b7280">Vibe</text>
-    </svg>
+    {/*  <text x="45" y="25" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="700" fill="#1e3a8a">Estate</text>*/}
+    {/*  <text x="45" y="42" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="400" fill="#6b7280">Vibe</text>*/}
+    {/*</svg>*/}
+    <img
+      alt=""
+      src="/estate-vibe-modern-v1.png"
+      className="h-24 w-auto"
+    />
   </a>
 );
 export const LogoLG = () => (

@@ -1,6 +1,3 @@
-import PropList from "@/app/prop1/PropList";
-import {propsWithPhotos} from "@/mockData/mockPropList";
-
 export default function Home() {
   return (
     <div className="">

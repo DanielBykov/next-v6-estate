@@ -6,9 +6,9 @@ import {Badge_} from "@/_UI/_shadcnCustom/badge";
 
 export default function PropertyCard2({ property }) {
   const formatPrice = (price) => {
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat("en-GB", {
       style: "currency",
-      currency: "USD",
+      currency: "NZD",
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(price)
