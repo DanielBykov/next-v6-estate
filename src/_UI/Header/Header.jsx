@@ -15,6 +15,7 @@ const navigationItems = [
   { name: 'Home', href: '/' },
   { name: '1 Col', href: '/prop1' },
   { name: '3 Col with search', href: '/prop2' },
+  { name: '3 Col with search Server', href: '/prop2-server' },
   // { name: 'Residential', href: '/residential' },
   // { name: 'Rural', href: '/rural' },
   // { name: 'Commercial', href: '/commercial' },
