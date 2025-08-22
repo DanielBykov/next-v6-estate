@@ -15,7 +15,7 @@ export default function PropertyCard2({ property }) {
   }
 
   return (
-    <Link href={`/properties/${property.id}`}>
+    <Link href={`/prop2-server/${property.id}/`}>
       <Card className="overflow-hidden hover:shadow-lg transition-shadow">
         <div className="relative h-48">
           <Image

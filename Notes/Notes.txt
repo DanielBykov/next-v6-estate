@@ -9,13 +9,16 @@ Zoo:
     shadcn - UI row components
     Lucide - icons
     Clerk - auth
-    Supabase - DB
 
     = Ideas / To Try =
     logoipsum.com - random logo
+
+    = Back End =
+    Supabase - DB
     DrizzleORM - ORM
-    Prizma (Mongodb)
+    Prisma (Mongodb)
     Mongodb pure
+    Prisma (Vercel Neon)
 
 
 Property fields

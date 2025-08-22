@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {ClerkProvider, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton} from "@clerk/nextjs";
-import {HeaderBY_v0Generated} from "@/_UI/_backYard/HeaderBY_v0-generated";
+import {ClerkProvider} from "@clerk/nextjs";
 import Header from "@/_UI/Header/Header";
 import Body from "@/_UI/Main/Body";
 import {ScreenSize} from "@/_UI/_dev/ScreenSize";

@@ -6,7 +6,7 @@ import PropertyListDynamic, {PropertyFallback} from "@/app/prop2-server/property
 import {Suspense} from "react";
 import SearchFiltersParams from "@/app/prop2-server/search-filters";
 
-export default async function Prop2({searchParams}) {
+export default async function Prop2Server({searchParams}) {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
