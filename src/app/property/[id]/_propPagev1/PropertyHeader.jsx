@@ -1,4 +1,4 @@
-import {ButtonC} from "@/_UI/_shadcnCustom/ButtonC";
+import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
 
 export default function PropertyHeader() {
   return (
@@ -23,15 +23,15 @@ export default function PropertyHeader() {
             </nav>
           </div>
           <div className="flex items-center space-x-4">
-            <ButtonC variant="ghost" size="sm" className="text-primary-foreground hover:text-accent">
+            <ButtonV1 variant="ghost" size="sm" className="text-primary-foreground hover:text-accent">
               {/*<Search className="h-4 w-4" />*/}
-            </ButtonC>
-            <ButtonC variant="ghost" size="sm" className="text-primary-foreground hover:text-accent">
+            </ButtonV1>
+            <ButtonV1 variant="ghost" size="sm" className="text-primary-foreground hover:text-accent">
               {/*<Heart className="h-4 w-4" />*/}
-            </ButtonC>
-            <ButtonC variant="ghost" size="sm" className="text-primary-foreground hover:text-accent">
+            </ButtonV1>
+            <ButtonV1 variant="ghost" size="sm" className="text-primary-foreground hover:text-accent">
               {/*<Share2 className="h-4 w-4" />*/}
-            </ButtonC>
+            </ButtonV1>
           </div>
         </div>
       </div>

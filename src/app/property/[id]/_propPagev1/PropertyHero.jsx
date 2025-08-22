@@ -1,4 +1,4 @@
-import {ButtonC} from "@/_UI/_shadcnCustom/ButtonC";
+import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
 import { ChevronLeft, ChevronRight, MapPin, Badge } from "lucide-react"
 
 export default function PropertyHero() {
@@ -9,20 +9,20 @@ export default function PropertyHero() {
         <div className="absolute inset-0 bg-black/20" />
 
         {/* Navigation arrows */}
-        <ButtonC
+        <ButtonV1
           variant="ghost"
           size="icon"
           className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary"
         >
           <ChevronLeft className="h-6 w-6" />
-        </ButtonC>
-        <ButtonC
+        </ButtonV1>
+        <ButtonV1
           variant="ghost"
           size="icon"
           className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primary"
         >
           <ChevronRight className="h-6 w-6" />
-        </ButtonC>
+        </ButtonV1>
 
         {/* Photo counter */}
         <div className="absolute bottom-4 right-4 bg-black/60 text-white px-3 py-1 rounded-md text-sm">1 / 24</div>
@@ -53,8 +53,8 @@ export default function PropertyHero() {
             </div>
           </div>
           <div className="flex gap-2">
-            <ButtonC variant="outline">Schedule Viewing</ButtonC>
-            <ButtonC className="bg-accent hover:bg-accent/90">Contact Agent</ButtonC>
+            <ButtonV1 variant="outline">Schedule Viewing</ButtonV1>
+            <ButtonV1 className="bg-accent hover:bg-accent/90">Contact Agent</ButtonV1>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import {Dialog, DialogPanel} from "@headlessui/react";
 import {SignedIn, SignedOut, SignInButton, SignUpButton, UserButton} from "@clerk/nextjs";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
-import {ButtonC} from "@/_UI/_shadcnCustom/ButtonC";
+import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
 
 export const New = ({children}) => (
   <div className="" data-ui="">
@@ -67,14 +67,14 @@ export const NavigationItems = ({items}) => {
   return (
     <div className="hidden lg:flex lg:gap-x-5" data-ui="Navi">
       {items.map((item) => (
-        <ButtonC
+        <ButtonV1
           key={item.name}
           asChild
           variant={isActiveItem(item.href) ? "secondary":"outline"}
           rounded="full"
           >
           <Link href={item.href}>{item.name}</Link>
-        </ButtonC>
+        </ButtonV1>
 
       ))}
     </div>
@@ -132,12 +132,12 @@ export const SignInOut = () => (
   <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-3" data-ui="SignInOut">
 
     <SignedOut>
-      <ButtonC asChild className="border border-indigo-700/50 cursor-pointer hover:opacity-50" rounded="full">
+      <ButtonV1 asChild className="border border-indigo-700/50 cursor-pointer hover:opacity-50" rounded="full">
         <SignInButton />
-      </ButtonC>
-      <ButtonC asChild className="text-white bg-indigo-700/50 cursor-pointer hover:opacity-70" rounded="full">
+      </ButtonV1>
+      <ButtonV1 asChild className="text-white bg-indigo-700/50 cursor-pointer hover:opacity-70" rounded="full">
         <SignUpButton />
-      </ButtonC>
+      </ButtonV1>
     </SignedOut>
 
     <SignedIn>

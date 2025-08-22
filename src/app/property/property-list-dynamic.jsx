@@ -1,5 +1,5 @@
-import {ButtonC} from "@/_UI/_shadcnCustom/ButtonC";
-import PropertyCard2 from "@/app/prop2-server/property-card";
+import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
+import PropertyCard2 from "@/app/property/property-card";
 import {prisma} from "@/lib/prisma";
 import {delay} from "@/lib/utils";
 import Link from "next/link";
@@ -54,7 +54,7 @@ export default async function PropertyListDynamic ({searchParams}){
     <div className="text-center py-12">
       <p className="text-gray-600 mb-4">No properties found matching your criteria.</p>
       <Link href="/add-property">
-        <ButtonC>Add the first property</ButtonC>
+        <ButtonV1>Add the first property</ButtonV1>
       </Link>
     </div>
   )

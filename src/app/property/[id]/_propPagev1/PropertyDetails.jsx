@@ -1,6 +1,6 @@
 import { MapPin, Home, Car } from "lucide-react"
-import { Badge_ as Badge } from "@/_UI/_shadcnCustom/badge"
-import {Card, CardContent, CardHeader, CardTitle} from "@/_UI/_shadcnCustom/card";
+import { Badge_ as Badge } from "@/components/ui/badge"
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 
 export default function PropertyDetails() {
   return (

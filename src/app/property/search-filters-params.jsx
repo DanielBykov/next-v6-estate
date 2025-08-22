@@ -3,21 +3,39 @@
 import { useState } from "react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Search } from "lucide-react"
-import {Input} from "@/_UI/_shadcnCustom/input";
-import {ButtonC} from "@/_UI/_shadcnCustom/ButtonC";
+import {Input} from "@/components/ui/input";
+import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
+import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
-export default function SearchFilters({ onSearch }) {
+export default function SearchFiltersParams() {
+
+  const searchParams = useSearchParams();
+  const params = new URLSearchParams(searchParams);
+  const pathname = usePathname();
+  const { replace } = useRouter();
+
+  function handleSearch(filters) {
+    Object.entries(filters).forEach(([key, value]) => {
+      if (value && value !== "all") {
+        params.set(key, value);
+      } else {
+        params.delete(key);
+      }
+    })
+    replace(`${pathname}?${params.toString()}`);
+  }
+
   const [filters, setFilters] = useState({
-    search: "",
-    city: "",
-    minPrice: "",
-    maxPrice: "",
-    propertyType: "all",
+    search: params.get("search") || "",
+    city: params.get("city") || "",
+    minPrice: params.get("minPrice") || "",
+    maxPrice: params.get("maxPrice") || "",
+    propertyType: params.get("propertyType") || "all",
   })
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    onSearch(filters)
+    handleSearch(filters)
   }
 
   const handleReset = () => {
@@ -29,7 +47,7 @@ export default function SearchFilters({ onSearch }) {
       propertyType: "all",
     }
     setFilters(resetFilters)
-    onSearch(resetFilters)
+    handleSearch(resetFilters)
   }
 
   return (
@@ -89,13 +107,13 @@ export default function SearchFilters({ onSearch }) {
       </div>
 
       <div className="flex gap-2 mt-4">
-        <ButtonC type="submit" className="flex items-center gap-2">
+        <ButtonV1 type="submit" className="flex items-center gap-2">
           <Search className="w-4 h-4" />
           Search
-        </ButtonC>
-        <ButtonC type="button" variant="outline" onClick={handleReset}>
+        </ButtonV1>
+        <ButtonV1 type="button" variant="outline" onClick={handleReset}>
           Reset
-        </ButtonC>
+        </ButtonV1>
       </div>
     </form>
   )

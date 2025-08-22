@@ -1,9 +1,9 @@
-import {Card, CardContent, CardHeader, CardTitle} from "@/_UI/_shadcnCustom/card";
-import {ButtonC} from "@/_UI/_shadcnCustom/ButtonC";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
 import { Phone, Mail, MessageSquare } from "lucide-react"
 import {Label} from "@/components/ui/label";
-import {Input} from "@/_UI/_shadcnCustom/input";
-import {Textarea} from "@/_UI/_shadcnCustom/textarea";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
 
 export default function PropertyContact() {
   return (
@@ -35,14 +35,14 @@ export default function PropertyContact() {
           </div>
 
           <div className="flex gap-2">
-            <ButtonC className="flex-1 bg-accent hover:bg-accent/90">
+            <ButtonV1 className="flex-1 bg-accent hover:bg-accent/90">
               <Phone className="h-4 w-4 mr-2" />
               Call
-            </ButtonC>
-            <ButtonC variant="outline" className="flex-1 bg-transparent">
+            </ButtonV1>
+            <ButtonV1 variant="outline" className="flex-1 bg-transparent">
               <MessageSquare className="h-4 w-4 mr-2" />
               Message
-            </ButtonC>
+            </ButtonV1>
           </div>
         </CardContent>
       </Card>
@@ -83,7 +83,7 @@ export default function PropertyContact() {
             />
           </div>
 
-          <ButtonC className="w-full bg-accent hover:bg-accent/90">Send Enquiry</ButtonC>
+          <ButtonV1 className="w-full bg-accent hover:bg-accent/90">Send Enquiry</ButtonV1>
         </CardContent>
       </Card>
 
@@ -109,9 +109,9 @@ export default function PropertyContact() {
             </div>
           </div>
 
-          <ButtonC variant="outline" className="w-full bg-transparent">
+          <ButtonV1 variant="outline" className="w-full bg-transparent">
             Calculate Repayments
-          </ButtonC>
+          </ButtonV1>
 
           <div className="text-center p-4 bg-card rounded-lg">
             <p className="text-sm text-muted-foreground">Estimated weekly payment</p>

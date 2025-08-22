@@ -1,7 +1,8 @@
 import Link from "next/link";
 import {ArrowLeftIcon} from "lucide-react";
-import PropPageV1 from "@/app/prop2-server/[id]/_propPagev1/PropPageV1";
+import PropPageV1 from "@/app/property/[id]/_propPagev1/PropPageV1";
 import {prisma} from "@/lib/prisma";
+import {PROPERTY_PAGE_URI} from "@/app/property/const";
 
 export default async function PropertyPage({params}) {
   const {id} = await params
@@ -10,14 +11,12 @@ export default async function PropertyPage({params}) {
     where: {id}
   })
 
-  // prisma.property.
-
   console.log('d256 property:', property)
 
   return (
     <div>
       <Link
-        href="/prop2-server"
+        href={"/"+PROPERTY_PAGE_URI}
         className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 group"
       >
         <ArrowLeftIcon className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" />

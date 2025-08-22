@@ -1,7 +1,7 @@
-import PropertyHeader from "@/app/prop2-server/[id]/_propPagev1/PropertyHeader";
-import PropertyDetails from "@/app/prop2-server/[id]/_propPagev1/PropertyDetails";
-import PropertyHero from "@/app/prop2-server/[id]/_propPagev1/PropertyHero";
-import PropertyContact from "@/app/prop2-server/[id]/_propPagev1/PropertyContact";
+import PropertyHeader from "@/app/property/[id]/_propPagev1/PropertyHeader";
+import PropertyDetails from "@/app/property/[id]/_propPagev1/PropertyDetails";
+import PropertyHero from "@/app/property/[id]/_propPagev1/PropertyHero";
+import PropertyContact from "@/app/property/[id]/_propPagev1/PropertyContact";
 
 export default function PropPageV1({id}) {
   return (

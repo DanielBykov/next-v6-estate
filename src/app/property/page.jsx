@@ -1,10 +1,10 @@
 import Link from "next/link"
 import { Plus } from "lucide-react"
-import {ButtonC} from "@/_UI/_shadcnCustom/ButtonC";
+import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
 import {prisma} from "@/lib/prisma";
-import PropertyListDynamic, {PropertyFallback} from "@/app/prop2-server/propertyListDynamic";
+import PropertyListDynamic, {PropertyFallback} from "@/app/property/property-list-dynamic";
 import {Suspense} from "react";
-import SearchFiltersParams from "@/app/prop2-server/search-filters";
+import SearchFiltersParams from "@/app/property/search-filters-params";
 
 export default async function Prop2Server({searchParams}) {
   return (
@@ -15,10 +15,10 @@ export default async function Prop2Server({searchParams}) {
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold text-gray-900">Residential (HC)</h1>
             <Link href="/add-property">
-              <ButtonC className="flex items-center gap-2">
+              <ButtonV1 className="flex items-center gap-2">
                 <Plus className="w-4 h-4" />
                 Add Property
-              </ButtonC>
+              </ButtonV1>
             </Link>
           </div>
         </div>
