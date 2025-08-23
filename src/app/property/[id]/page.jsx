@@ -7,11 +7,10 @@ import {PROPERTY_PAGE_URI} from "@/app/property/const";
 export default async function PropertyPage({params}) {
   const {id} = await params
 
-  const property = await prisma.property.findUnique({
-    where: {id: parseInt(id)}
+  const propertyData = await prisma.property.findUnique({
+    where: {id: parseInt(id)},
+    include: {agent: true}
   })
-
-  console.log('d256 property:', property)
 
   return (
     <div>
@@ -23,7 +22,7 @@ export default async function PropertyPage({params}) {
         Back to a property list (PROP 2 Server)
       </Link>
 
-      <PropPageV1 id={id}/>
+      <PropPageV1 propertyData={propertyData}/>
 
     </div>
   )

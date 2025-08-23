@@ -5,7 +5,14 @@ import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 
-export default function PropertyContact() {
+export default function PropertyContact(props) {
+  const {
+    name,
+    phone,
+    email,
+    info,
+    photo,
+  } = props
   return (
     <div className="space-y-6">
       {/* Agent Details */}
@@ -17,20 +24,20 @@ export default function PropertyContact() {
           <div className="flex items-center space-x-4">
             <img src="/real-estate-agent-headshot.png" alt="Agent" className="w-16 h-16 rounded-full object-cover" />
             <div>
-              <h3 className="font-semibold text-primary">Sarah Johnson</h3>
-              <p className="text-sm text-muted-foreground">Licensed Real Estate Agent</p>
-              <p className="text-sm text-muted-foreground">Premium Properties Ltd</p>
+              <h3 className="font-semibold text-primary">{name}</h3>
+              <p className="text-sm text-muted-foreground">{info}</p>
+              <p className="text-sm text-muted-foreground">Premium Properties Ltd [hc]</p>
             </div>
           </div>
 
           <div className="space-y-2">
             <div className="flex items-center space-x-2 text-sm">
               <Phone className="h-4 w-4 text-accent" />
-              <span>+64 21 123 4567</span>
+              <span>{phone}</span>
             </div>
             <div className="flex items-center space-x-2 text-sm">
               <Mail className="h-4 w-4 text-accent" />
-              <span>sarah.johnson@premium.co.nz</span>
+              <span>{email}</span>
             </div>
           </div>
 

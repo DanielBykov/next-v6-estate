@@ -1,11 +1,20 @@
 import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
 import { ChevronLeft, ChevronRight, MapPin, Badge } from "lucide-react"
+import {nzdFormatter} from "@/lib/utils";
 
-export default function PropertyHero() {
+export default function PropertyHero(props) {
+  const {
+    price,
+    address,
+    bedrooms,
+    bathrooms,
+    sqm,
+  } = props
+  const price_ = new Intl.NumberFormat('en-NZ', {style:'currency', currency:'NZD'})
   return (
     <section className="relative">
       <div className="relative h-96 md:h-[500px] overflow-hidden">
-        <img src="/modern-luxury-house-exterior.png" alt="Property exterior" className="w-full h-full object-cover" />
+        {/*<img src="/modern-luxury-house-exterior.png" alt="Property exterior" className="w-full h-full object-cover" />*/}
         <div className="absolute inset-0 bg-black/20" />
 
         {/* Navigation arrows */}
@@ -37,19 +46,17 @@ export default function PropertyHero() {
               </Badge>
               <Badge variant="outline">New Listing</Badge>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-primary mb-2">$1,250,000</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-primary mb-2">{nzdFormatter.format(price)}</h1>
             <div className="flex items-center text-muted-foreground mb-2">
               <MapPin className="h-4 w-4 mr-1" />
-              <span>123 Elm Street, Auckland Central, Auckland</span>
+              <span>{address}</span>
             </div>
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>4 bed</span>
+              <span>{bedrooms} bed</span>
               <span>•</span>
-              <span>3 bath</span>
+              <span>{bathrooms} bath</span>
               <span>•</span>
-              <span>2 car</span>
-              <span>•</span>
-              <span>320m² floor</span>
+              <span>{sqm}m² floor</span>
             </div>
           </div>
           <div className="flex gap-2">
