@@ -54,7 +54,7 @@ export default function PropertyCard2({ property }) {
               </div>
               <div className="flex items-center">
                 <Square className="w-4 h-4 mr-1" />
-                <span>{property.sqft.toLocaleString()} sqft</span>
+                <span>{property.sqm.toLocaleString()} sqm</span>
               </div>
             </div>
           </div>

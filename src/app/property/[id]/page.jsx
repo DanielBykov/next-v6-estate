@@ -8,7 +8,7 @@ export default async function PropertyPage({params}) {
   const {id} = await params
 
   const property = await prisma.property.findUnique({
-    where: {id}
+    where: {id: parseInt(id)}
   })
 
   console.log('d256 property:', property)
