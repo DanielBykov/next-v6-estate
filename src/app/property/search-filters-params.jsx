@@ -8,7 +8,7 @@ function Search() {
 
   return <input placeholder="Search..." />
 }
-
+// 3
 export function Searchbar() {
   return (
     <Suspense>
