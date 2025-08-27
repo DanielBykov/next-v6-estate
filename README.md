@@ -35,3 +35,5 @@ pnpm dev
 ```
 
 Open http://localhost:3000 with your browser to see the result.
+
+Preview https://next-v6-estate.vercel.app/property
