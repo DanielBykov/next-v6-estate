@@ -14,15 +14,14 @@ Zoo:
     logoipsum.com - random logo
 
     = Back End =
+    Prisma (Vercel Neon) - CURRENT
     Supabase - DB
     DrizzleORM - ORM
     Prisma (Mongodb)
     Mongodb pure
-    Prisma (Vercel Neon) - CURRENT
 
 
-Property fields
-
+Property fields:
     title: ['104 Mill Road, Kensington, Whangarei']
     subTitle: ['Urgent Sale - No Plan B!']
     pricing: ['Auction', 'Offers Over $389,000', ...]

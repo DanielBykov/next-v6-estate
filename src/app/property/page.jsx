@@ -13,13 +13,13 @@ export default async function Prop2Server({searchParams}) {
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-900">Residential (HC)</h1>
-            <Link href="/add-property">
-              <ButtonV1 className="flex items-center gap-2">
+            <h1 className="text-2xl font-bold text-gray-900">Residential Properties</h1>
+            {/*<Link href="/add-property">*/}
+              <ButtonV1 className="flex items-center gap-2" disabled>
                 <Plus className="w-4 h-4" />
                 Add Property
               </ButtonV1>
-            </Link>
+            {/*</Link>*/}
           </div>
         </div>
       </header>

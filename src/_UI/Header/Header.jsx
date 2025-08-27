@@ -14,12 +14,7 @@ import {PROPERTY_PAGE_URI} from "@/app/property/const";
 
 const navigationItems = [
   { name: 'Home', href: '/' },
-  // { name: '1 Col', href: '/prop1' },
-  // { name: '3 Col with search', href: '/prop2' },
-  { name: '3 Col with search Server', href: '/'+PROPERTY_PAGE_URI },
-  // { name: 'Residential', href: '/residential' },
-  // { name: 'Rural', href: '/rural' },
-  // { name: 'Commercial', href: '/commercial' },
+  { name: 'Properties', href: '/'+PROPERTY_PAGE_URI },
 ]
 
 export default function Header() {
