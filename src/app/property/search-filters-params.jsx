@@ -1,122 +1,141 @@
-"use client"
+// "use client"
+//
+// import {Suspense, useState} from "react"
+// import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+// import { Search } from "lucide-react"
+// import {Input} from "@/components/ui/input";
+// import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
+// import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+//
+// export default function SearchFiltersParams() {
+//
+//   const searchParams = useSearchParams();
+//   const params = new URLSearchParams(searchParams);
+//   const pathname = usePathname();
+//   const { replace } = useRouter();
+//
+//   function handleSearch(filters) {
+//     Object.entries(filters).forEach(([key, value]) => {
+//       if (value && value !== "all") {
+//         params.set(key, value);
+//       } else {
+//         params.delete(key);
+//       }
+//     })
+//     replace(`${pathname}?${params.toString()}`);
+//   }
+//
+//   const [filters, setFilters] = useState({
+//     search: params.get("search") || "",
+//     city: params.get("city") || "",
+//     minPrice: params.get("minPrice") || "",
+//     maxPrice: params.get("maxPrice") || "",
+//     propertyType: params.get("propertyType") || "all",
+//   })
+//
+//   const handleSubmit = (e) => {
+//     e.preventDefault()
+//     handleSearch(filters)
+//   }
+//
+//   const handleReset = () => {
+//     const resetFilters = {
+//       search: "",
+//       city: "",
+//       minPrice: "",
+//       maxPrice: "",
+//       propertyType: "all",
+//     }
+//     setFilters(resetFilters)
+//     handleSearch(resetFilters)
+//   }
+//
+//   return (
+//     <Suspense>
+//       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md mb-8">
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
+//           <div className="lg:col-span-2">
+//             <Input
+//               placeholder="Search properties..."
+//               value={filters.search}
+//               onChange={(e) => setFilters({ ...filters, search: e.target.value })}
+//             />
+//           </div>
+//
+//           <div>
+//             <Input
+//               placeholder="City"
+//               value={filters.city}
+//               onChange={(e) => setFilters({ ...filters, city: e.target.value })}
+//             />
+//           </div>
+//
+//           <div>
+//             <Input
+//               type="number"
+//               placeholder="Min Price"
+//               value={filters.minPrice}
+//               onChange={(e) => setFilters({ ...filters, minPrice: e.target.value })}
+//             />
+//           </div>
+//
+//           <div>
+//             <Input
+//               type="number"
+//               placeholder="Max Price"
+//               value={filters.maxPrice}
+//               onChange={(e) => setFilters({ ...filters, maxPrice: e.target.value })}
+//             />
+//           </div>
+//
+//           <div>
+//             <Select
+//               value={filters.propertyType}
+//               onValueChange={(value) => setFilters({ ...filters, propertyType: value })}
+//             >
+//               <SelectTrigger>
+//                 <SelectValue placeholder="Property Type" />
+//               </SelectTrigger>
+//               <SelectContent>
+//                 <SelectItem value="all">All Types</SelectItem>
+//                 <SelectItem value="house">House</SelectItem>
+//                 <SelectItem value="apartment">Apartment</SelectItem>
+//                 <SelectItem value="condo">Condo</SelectItem>
+//                 <SelectItem value="townhouse">Townhouse</SelectItem>
+//               </SelectContent>
+//             </Select>
+//           </div>
+//         </div>
+//
+//         <div className="flex gap-2 mt-4">
+//           <ButtonV1 type="submit" className="flex items-center gap-2">
+//             <Search className="w-4 h-4" />
+//             Search
+//           </ButtonV1>
+//           <ButtonV1 type="button" variant="outline" onClick={handleReset}>
+//             Reset
+//           </ButtonV1>
+//         </div>
+//       </form>
+//     </Suspense>
+//   )
+// }
 
-import {Suspense, useState} from "react"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Search } from "lucide-react"
-import {Input} from "@/components/ui/input";
-import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
-import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+'use client'
 
-export default function SearchFiltersParams() {
+import { useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
 
-  const searchParams = useSearchParams();
-  const params = new URLSearchParams(searchParams);
-  const pathname = usePathname();
-  const { replace } = useRouter();
+function Search() {
+  const searchParams = useSearchParams()
 
-  function handleSearch(filters) {
-    Object.entries(filters).forEach(([key, value]) => {
-      if (value && value !== "all") {
-        params.set(key, value);
-      } else {
-        params.delete(key);
-      }
-    })
-    replace(`${pathname}?${params.toString()}`);
-  }
+  return <input placeholder="Search..." />
+}
 
-  const [filters, setFilters] = useState({
-    search: params.get("search") || "",
-    city: params.get("city") || "",
-    minPrice: params.get("minPrice") || "",
-    maxPrice: params.get("maxPrice") || "",
-    propertyType: params.get("propertyType") || "all",
-  })
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    handleSearch(filters)
-  }
-
-  const handleReset = () => {
-    const resetFilters = {
-      search: "",
-      city: "",
-      minPrice: "",
-      maxPrice: "",
-      propertyType: "all",
-    }
-    setFilters(resetFilters)
-    handleSearch(resetFilters)
-  }
-
+export function Searchbar() {
   return (
     <Suspense>
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md mb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
-          <div className="lg:col-span-2">
-            <Input
-              placeholder="Search properties..."
-              value={filters.search}
-              onChange={(e) => setFilters({ ...filters, search: e.target.value })}
-            />
-          </div>
-
-          <div>
-            <Input
-              placeholder="City"
-              value={filters.city}
-              onChange={(e) => setFilters({ ...filters, city: e.target.value })}
-            />
-          </div>
-
-          <div>
-            <Input
-              type="number"
-              placeholder="Min Price"
-              value={filters.minPrice}
-              onChange={(e) => setFilters({ ...filters, minPrice: e.target.value })}
-            />
-          </div>
-
-          <div>
-            <Input
-              type="number"
-              placeholder="Max Price"
-              value={filters.maxPrice}
-              onChange={(e) => setFilters({ ...filters, maxPrice: e.target.value })}
-            />
-          </div>
-
-          <div>
-            <Select
-              value={filters.propertyType}
-              onValueChange={(value) => setFilters({ ...filters, propertyType: value })}
-            >
-              <SelectTrigger>
-                <SelectValue placeholder="Property Type" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Types</SelectItem>
-                <SelectItem value="house">House</SelectItem>
-                <SelectItem value="apartment">Apartment</SelectItem>
-                <SelectItem value="condo">Condo</SelectItem>
-                <SelectItem value="townhouse">Townhouse</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
-
-        <div className="flex gap-2 mt-4">
-          <ButtonV1 type="submit" className="flex items-center gap-2">
-            <Search className="w-4 h-4" />
-            Search
-          </ButtonV1>
-          <ButtonV1 type="button" variant="outline" onClick={handleReset}>
-            Reset
-          </ButtonV1>
-        </div>
-      </form>
+      <Search />
     </Suspense>
   )
 }
