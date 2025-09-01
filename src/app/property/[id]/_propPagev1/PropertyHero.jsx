@@ -1,20 +1,29 @@
 import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
 import { ChevronLeft, ChevronRight, MapPin, Badge } from "lucide-react"
 import {nzdFormatter} from "@/lib/utils";
+import Image from "next/image";
 
 export default function PropertyHero(props) {
   const {
+    title,
+    images,
     price,
     address,
     bedrooms,
     bathrooms,
     sqm,
   } = props
-  const price_ = new Intl.NumberFormat('en-NZ', {style:'currency', currency:'NZD'})
   return (
-    <section className="relative">
+    <section className="relative d256">
       <div className="relative h-96 md:h-[500px] overflow-hidden">
         {/*<img src="/modern-luxury-house-exterior.png" alt="Property exterior" className="w-full h-full object-cover" />*/}
+        <Image
+          src={"/pixels-photo-manual/" + images?.[0]}
+          alt={title}
+          fill
+          className="object-cover"
+
+        />
         <div className="absolute inset-0 bg-black/20" />
 
         {/* Navigation arrows */}

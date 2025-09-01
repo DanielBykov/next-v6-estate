@@ -4,6 +4,8 @@ import PropertyContact from "@/app/property/[id]/_propPagev1/PropertyContact";
 
 export default function PropPageV1({propertyData: d}) {
   const {
+    title,
+    images,
     price,
     address,
     bedrooms,
@@ -16,6 +18,8 @@ export default function PropPageV1({propertyData: d}) {
     <div className="min-h-screen bg-background">
       {/*<PropertyHeader />*/}
       <PropertyHero
+        title={title}
+        images={images}
         price={price}
         address={address}
         bedrooms={bedrooms}

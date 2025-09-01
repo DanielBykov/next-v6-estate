@@ -20,7 +20,7 @@ export default function PropertyCard2({ property }) {
       <Card className="overflow-hidden hover:shadow-lg transition-shadow">
         <div className="relative h-48">
           <Image
-            src={property.images?.[0] || "/placeholder.svg?height=200&width=300"}
+            src={"/pixels-photo-manual/" + property.images?.[0] || "/placeholder.svg?height=200&width=300"}
             alt={property.title}
             fill
             className="object-cover"
