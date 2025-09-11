@@ -1,39 +1,11 @@
-// import { PropertyCard } from "@/components/property-card"
+import {prisma} from "@/lib/prisma";
+import PropertyCard2 from "@/app/property/property-card";
 
-const featuredProperties = [
-  {
-    id: 1,
-    title: "Modern Downtown Condo",
-    price: "$750,000",
-    location: "Downtown District",
-    bedrooms: 2,
-    bathrooms: 2,
-    sqft: "1,200",
-    image: "/placeholder-5ym7o.png",
-  },
-  {
-    id: 2,
-    title: "Suburban Family Home",
-    price: "$950,000",
-    location: "Maple Heights",
-    bedrooms: 4,
-    bathrooms: 3,
-    sqft: "2,800",
-    image: "/placeholder-7s818.png",
-  },
-  {
-    id: 3,
-    title: "Luxury Waterfront Villa",
-    price: "$2,100,000",
-    location: "Lakeside Estates",
-    bedrooms: 5,
-    bathrooms: 4,
-    sqft: "4,500",
-    image: "/placeholder-sbfbo.png",
-  },
-]
-
-export function NewListingsSection() {
+export async function NewListingsSection() {
+  const properties = await prisma.property.findMany({
+    orderBy: { createdAt: "desc" },
+    take: 3
+  })
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -45,9 +17,9 @@ export function NewListingsSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/*{featuredProperties.map((property) => (*/}
-          {/*  <PropertyCard key={property.id} property={property} />*/}
-          {/*))}*/}
+          {properties.map((property) => (
+            <PropertyCard2 key={property.id} property={property} />
+          ))}
         </div>
       </div>
     </section>
