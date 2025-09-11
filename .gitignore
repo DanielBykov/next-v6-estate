@@ -39,4 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-!/Notes/Keys_LocalOnly.txt
+
+/_dev-notes__private/*

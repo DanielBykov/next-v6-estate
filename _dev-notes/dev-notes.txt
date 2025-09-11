@@ -1,0 +1,21 @@
+Project dev name: next-v6-estate
+Project name: EstateVibe
+
+Zoo:
+    = In Use =
+    Next.js
+    Vercel - hosting
+    v0.dev - UI AI
+    shadcn - UI row components
+    Lucide - icons
+    Clerk - auth
+
+    = Ideas / To Try =
+    logoipsum.com - random logo
+
+    = Back End =
+    Prisma (Vercel Neon) - CURRENT
+    Supabase - DB
+    DrizzleORM - ORM
+    Prisma (Mongodb)
+    Mongodb pure
