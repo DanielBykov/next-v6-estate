@@ -10,7 +10,7 @@ The primary backend data source for this project is a PostgreSQL database hosted
 *   Practice fetching and displaying data from a real backend (Neon DB).
 *   Understand the trade-offs between different rendering patterns like SSR, SSG, and ISR.
 
-## Tech Zoo
+## Tech Stack
 * Next.JS
 * PostgreSQL (Neon)
 * Prisma (ORM)
@@ -36,4 +36,7 @@ pnpm dev
 
 Open http://localhost:3000 with your browser to see the result.
 
-Preview https://next-v6-estate.vercel.app/property
+Preview https://next-v6-estate.vercel.app
+
+![screenshot-home.png](screenshot-home.png)
+![screenshot-properties.png](screenshot-properties.png)
