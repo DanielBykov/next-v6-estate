@@ -19,7 +19,7 @@ export default async function PropertyPage({params}) {
         className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 group"
       >
         <ArrowLeftIcon className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-        Back to a property list (PROP 2 Server)
+        Back to the property list
       </Link>
 
       <PropPageV1 propertyData={propertyData}/>

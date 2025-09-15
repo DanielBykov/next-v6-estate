@@ -5,11 +5,31 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
-  {
+  `
+  inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all 
+  disabled:pointer-events-none disabled:opacity-50 
+  `,
+  // [&_svg]:pointer-events-none
+  // [&_svg:not([class*='size-'])]:size-4 shrink-0
+  // [&_svg]:shrink-0 outline-none
+  // focus-visible:border-ring
+  // focus-visible:ring-ring/50
+  // focus-visible:ring-[3px]
+  // aria-invalid:ring-destructive/20
+  // dark:aria-invalid:ring-destructive/40
+  // aria-invalid:border-destructive
+
+//   ember-view active
+// whitespace-nowrap leading-loose relative px-2
+// after:content after:absolute after:bottom-0 after:left-0 after:h-[3px] after:transition-all hover:after:w-full
+// text-primaryBlue-500 after:bg-primaryBlue-500 after:w-full
+
+
+{
     variants: {
       variant: {
-        menu: "",
+        none: "",
+        menu: "border text-emerald-600 bg-white border-emerald-600 cursor-pointer hover:opacity-50",
         default:
           "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
         destructive:

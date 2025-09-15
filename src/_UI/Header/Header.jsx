@@ -8,7 +8,7 @@ import {
   MobileMenuButton,
   NavBox,
   NavigationItems,
-  NaviMobileDialog
+  NaviMobileDialog, TrustIndicatorsBar
 } from "@/_UI/Header/elements";
 import {PROPERTY_PAGE_URI} from "@/app/property/const";
 
@@ -22,6 +22,7 @@ export default function Header() {
 
   return (
     <HeaderBox>
+      <TrustIndicatorsBar/>
       <NavBox>
         <LogoLG/>
         <MobileMenuButton onClick={() => setMobMenu(true)}/>

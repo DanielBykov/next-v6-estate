@@ -4,11 +4,32 @@ import {SignedIn, SignedOut, SignInButton, SignUpButton, UserButton} from "@cler
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {ButtonV1} from "@/_UI/_shadcnCustom/ButtonV1";
-import Image from "next/image";
+import {Home, Shield, Award} from "lucide-react";
 
 export const New = ({children}) => (
   <div className="" data-ui="">
     {children}
+  </div>
+);
+
+export const TrustIndicatorsBar = ({children}) => (
+  <div className="bg-muted py-2">
+    <div className="container mx-auto px-4">
+      <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground">
+        <div className="flex items-center gap-2">
+          <Shield className="h-4 w-4 text-green-600" />
+          <span>Verified Listings</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Award className="h-4 w-4 text-green-600" />
+          <span>Top Rated Agents</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Home className="h-4 w-4 text-green-600" />
+          <span>{"10,000+ Properties"}</span>
+        </div>
+      </div>
+    </div>
   </div>
 );
 
@@ -26,13 +47,11 @@ export const NavBox = ({children}) => (
 
 export const Logo = () => (
   <a href="/" className="-m-1.5 p-1.5" data-ui="Logo">
-    <span className="sr-only">Estate Vibe logo</span>
-    <Image
-      src="/estate-vibe-modern-v1.png"
-      width={100}
-      height={96}
-      alt="logo"
-    />
+    <div className="flex items-center relative overflow-hidden">
+      <Home className="h-8 w-8 text-emerald-600 mr-3" />
+      <h1 className="text-2xl font-bold text-primary font-sans">Estate Vibe</h1>
+      <div className="absolute w-full h-0.5 bottom-px left-[42px] bg-emerald-600/70"/>
+    </div>
   </a>
 );
 export const LogoLG = () => (
@@ -127,10 +146,10 @@ export const SignInOut = () => (
   <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-3" data-ui="SignInOut">
 
     <SignedOut>
-      <ButtonV1 asChild className="border border-indigo-700/50 cursor-pointer hover:opacity-50" rounded="full">
+      <ButtonV1 asChild variant="none" rounded="full" className="border text-emerald-600 bg-white border-emerald-600 cursor-pointer hover:opacity-50">
         <SignInButton />
       </ButtonV1>
-      <ButtonV1 asChild className="text-white bg-indigo-700/50 cursor-pointer hover:opacity-70" rounded="full">
+      <ButtonV1 asChild variant="none" className="text-white bg-emerald-600 cursor-pointer hover:opacity-70" rounded="full">
         <SignUpButton />
       </ButtonV1>
     </SignedOut>
