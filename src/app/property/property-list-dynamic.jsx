@@ -4,10 +4,10 @@ import {prisma} from "@/lib/prisma";
 import {delay} from "@/lib/utils";
 import Link from "next/link";
 
-export const PropertyFallback = () => (
+export const PropertyFallback = ({msg}) => (
   <div className="text-center py-12">
     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"/>
-    <p className="mt-4 text-gray-600">Loading properties...</p>
+    <p className="mt-4 text-gray-600">{msg}</p>
   </div>
 )
 
@@ -44,7 +44,7 @@ export default async function PropertyListDynamic ({searchParams}){
     where.propertyType = propertyType
   }
 
-  // await delay(2000)
+  await delay(2000)
   const properties = await prisma.property.findMany({
     where,
     orderBy: { createdAt: "desc" },
