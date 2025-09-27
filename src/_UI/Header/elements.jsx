@@ -50,7 +50,7 @@ export const Logo = () => (
     <div className="flex items-center relative overflow-hidden">
       <Home className="h-8 w-8 text-emerald-600 mr-3" />
       <h1 className="text-2xl font-bold text-primary font-sans">Estate Vibe</h1>
-      <div className="absolute w-full h-0.5 bottom-px left-[42px] bg-emerald-600/70"/>
+      <div className="absolute w-full h-[4px] bottom-[-1px] left-[42px] bg-emerald-600/70"/>
     </div>
   </a>
 );
@@ -84,8 +84,8 @@ export const NavigationItems = ({items}) => {
         <ButtonV1
           key={item.name}
           asChild
-          variant={isActiveItem(item.href) ? "secondary":"outline"}
-          rounded="full"
+          variant={isActiveItem(item.href) ? "menuActive":"menu"}
+          size=""
           >
           <Link href={item.href}>{item.name}</Link>
         </ButtonV1>
