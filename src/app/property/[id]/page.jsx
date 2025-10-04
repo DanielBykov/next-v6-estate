@@ -3,15 +3,26 @@ import {ArrowLeftIcon} from "lucide-react";
 import PropPageV1 from "@/app/property/[id]/_propPagev1/PropPageV1";
 import {prisma} from "@/lib/prisma";
 import {PROPERTY_PAGE_URI} from "@/app/property/const";
-import {delay} from "@/lib/utils";
+import { unstable_cache } from 'next/cache';
 
 export default async function PropertyPage({params}) {
   const {id} = await params
 
-  const propertyData = await prisma.property.findUnique({
-    where: {id: parseInt(id)},
-    include: {agent: true}
-  })
+  const getPropertyData = unstable_cache(
+    async (id) => {
+      return prisma.property.findUnique({
+        where: {id: parseInt(id)},
+        include: {agent: true}
+      })
+    },
+    ['property-by-id', id],
+    {
+      revalidate: 60, // revalidate cache every 60 seconds
+      tags: ['property']
+    }
+  );
+
+  const propertyData = await getPropertyData(id);
 
   return (
     <div>
