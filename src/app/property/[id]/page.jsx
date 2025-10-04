@@ -8,7 +8,6 @@ import {delay} from "@/lib/utils";
 export default async function PropertyPage({params}) {
   const {id} = await params
 
-  await delay(2000)
   const propertyData = await prisma.property.findUnique({
     where: {id: parseInt(id)},
     include: {agent: true}

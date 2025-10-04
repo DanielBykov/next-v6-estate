@@ -44,7 +44,6 @@ export default async function PropertyListDynamic ({searchParams}){
     where.propertyType = propertyType
   }
 
-  await delay(2000)
   const properties = await prisma.property.findMany({
     where,
     orderBy: { createdAt: "desc" },
